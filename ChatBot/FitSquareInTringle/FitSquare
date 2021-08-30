@@ -1,0 +1,38 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class FitSquare
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		 Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        while (n-- >= 1) {
+            int num = sc.nextInt();
+            if (num < 4) {
+                System.out.println("0");
+            } else {
+                if (num % 2 == 0) {
+                    int mul = num * num;
+                    int div = mul / 2;
+                    int senum = num - 2;
+                    int sub = div - senum;
+                    int res = sub / 4;
+                    System.out.println(res);
+                } else {
+                    int num1 = num - 1;
+                    int mul1 = num1 * num1;
+                    int div1 = mul1 / 2;
+                    int senum1 = num1 - 2;
+                    int sub1 = div1 - senum1;
+                    int res1 = sub1 / 4;
+                    System.out.println(res1);
+                }
+            }
+
+        }
+	}
+}
+
